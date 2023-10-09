@@ -125,8 +125,8 @@ width: 250px;
 }
 
 .card {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #574f4f67;
+    border: 1px solid #070707;
     border-radius: 5px;
     padding: 20px;
     margin: 20px;
@@ -134,9 +134,19 @@ width: 250px;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s, transform 0.5s;
-  
-   
-
+    word-spacing: 2px;
+    line-height: 25px;
+}
+button{
+    display: flex;
+    background-color: rgb(26, 24, 24);
+    padding: 5px ;
+    margin: 4px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 3px;
+    justify-items: center;
+    align-self: center;
 }
 
 .card h2 {
@@ -197,6 +207,5 @@ width: 250px;
     left: 20%;
     top: 190%;
 }
-/* Initial styling for your navbar */
 
   
