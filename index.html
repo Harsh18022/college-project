@@ -8,7 +8,7 @@
  
 </head>
 <body>
-    <div class="nav-bar">
+    <div class="nav-bar hide">
         <h3>logo</h3>
         <div class="search-bar">
             <input placeholder="search here">
@@ -18,20 +18,76 @@
             <a href="#">Python</a>
             <a href="#">C</a>
             <a href="#">C++</a>
-            <a href="#">Web devloper</a>
+            <!-- <a href="#">Web devloper</a> -->
         </div>
     </div>
+
+    
 
 
    <div class="layout">
     <img src="./assets/background.jpg" alt="">
-    <h1 class="mid">Welcome <div class="next">To Coditor Point</div></h1>
+    <h1 class="mid typing-animation">Welcome <div class="next">To Coditor Point</div></h1>
    </div>
 
    <div class="about-us">
     <h4 style="text-align: center;">About Us</h4>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime reprehenderit dolores eaque pariatur repellat eligendi, ut laudantium ipsum numquam eius maiores tempore facilis quaerat voluptatem sit sint delectus sapiente saepe qui ratione quo, nisi officiis culpa! Reiciendis quibusdam ad aperiam nisi neque atque maxime. Tenetur minus molestiae praesentium quis reprehenderit.</p>
+    <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime reprehenderit dolores eaque pariatur repellat eligendi, ut laudantium ipsum numquam eius maiores tempore facilis quaerat voluptatem sit sint delectus sapiente saepe qui ratione quo, nisi officiis culpa! Reiciendis quibusdam ad aperiam nisi neque atque maxime. Tenetur minus molestiae praesentium quis reprehenderit.</p>
    </div>
+
+   <div class="effect e"></div>
+   <div class="effect e1"></div>
+   <div class="effect e2"></div>
+   <div class="effect e3"></div>
+   
+
+   <div class="container">
+    <div class="card" data-scroll="0">
+        <h2>Java</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea expedita assumenda modi, dolorem voluptatibus quibusdam!</p>
+        <button>Know More</button>
+    </div>
+    <div class="card" data-scroll="1">
+        <h2>C</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, harum quis assumenda nisi eos possimus!</p>
+        <button>Know More</button>
+    </div>
+    <div class="card" data-scroll="2">
+        <h2>C++</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt cumque pariatur ipsum laboriosam deleniti quia!</p>
+        <button>Know More</button>
+    </div>
+    <div class="card" data-scroll="3">
+        <h2>Python</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis culpa praesentium eligendi minima eveniet saepe?</p>
+        <button>Know More</button>
+    </div>
+</div>
+
+<script>
+    const cards = document.querySelectorAll('.card');
+
+    function checkScroll() {
+        cards.forEach((card, index) => {
+            const rect = card.getBoundingClientRect();
+            if (rect.top >= 0 && rect.top <= window.innerHeight - 100) {
+                card.classList.add('in-view');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkScroll);
+
+    window.addEventListener('scroll', function() {
+  var navbar = document.querySelector('.navbar');
+  if (window.scrollY > 200) { // Adjust the scroll position where you want to hide the navbar
+    navbar.classList.add('hide');
+  } else {
+    navbar.classList.remove('hide');
+  }
+});
+
+</script>
 
 
 </body>

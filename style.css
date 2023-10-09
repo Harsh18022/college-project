@@ -1,23 +1,35 @@
 body{
     margin: 0;
     padding: 0;
+    background: -webkit-linear-gradient( #030303,rgb(32,21,21) , #030303);
+    width: 100%;
+    height: 100%;
 }
 .nav-bar{
     width: 100%;
     background: none;
-    position: absolute;
+    position: fixed;
     display: flex;
     z-index: 10;
     align-items: center;
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 1.85rem;    
     justify-content: space-evenly;
+
+    background: -webkit-linear-gradient( #030303,#eb4141);
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 a{
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     padding: 10px;
+
+
+    background: -webkit-linear-gradient( #030303,#eb4141);
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .search-bar input{
     margin: 0 100px 0 300px ;
@@ -37,12 +49,12 @@ img{
     position: relative;
     color: white;
 }
-.mid{
+.mid {
  position: absolute;
  top: 250px;
  left: 16px;     
  font-size: 7rem;   
- color: rgba(235, 80, 80, 0.205);
+ /* color: rgba(235, 80, 80, 0.205); */
 
  background: -webkit-linear-gradient( #030303,#eb4141);
  -webkit-background-clip: text;
@@ -76,3 +88,115 @@ width: 250px;
     background-color: rgba(235, 80, 80, 0.377);
     transition: 1s;
 }
+@keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* Apply the animation to the element with the class "typing-animation" */
+  .typing-animation {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(40, end);
+    /* border-right: 2px solid #333; Optional: Simulate a typing cursor */
+    /* padding-right: 8px; Optional: Adjust cursor spacing */
+  }
+
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position:absolute;
+    top: 900px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+  
+   
+
+}
+
+.card h2 {
+    font-size: 24px;
+    margin: 0 0 10px;
+}
+
+.card p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Animation */
+.card.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Keyframes for the scroll animation */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.effect{
+    display: flex;
+    flex-wrap: wrap;
+    height: 500px;
+    width: 500px;
+    background:-webkit-linear-gradient( #695b5b,rgb(128, 57, 57) , #030303) ;
+    z-index: -9;
+    position: absolute;
+    left: 35%;
+   border: none;
+    border-radius: 50%;
+}
+.e{
+    left: 50%;
+    top: 170%;
+}
+.e1{
+    left: -20%;
+    top: 100%;
+}
+.e2{
+    left: 62.5%;
+    top: 85%;
+}
+.e3{
+    width: 200px;
+    height: 200px;
+    left: 20%;
+    top: 190%;
+}
+/* Initial styling for your navbar */
+
+  
